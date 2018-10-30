@@ -1,0 +1,54 @@
+package veterinaria;
+public class Cliente {
+    private int numeroCliente;
+    private String nombre;
+    private int antiguedad;
+    private Mascotas mascota;
+
+    public int getNumeroCliente() {
+        return numeroCliente;
+    }
+
+    public void setNumeroCliente(int numeroCliente) {
+        this.numeroCliente = numeroCliente;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getAntiguedad() {
+        return antiguedad;
+    }
+
+    public void setAntiguedad(int antiguedad) {
+        this.antiguedad = antiguedad;
+    }
+
+    public Mascotas getMascota() {
+        return mascota;
+    }
+
+    public void setMascota(Mascotas mascota) {
+        this.mascota = mascota;
+    }
+
+    public Cliente(int numeroCliente, String nombre, int antiguedad, Mascotas mascota) {
+        this.numeroCliente = numeroCliente;
+        this.nombre = nombre;
+        this.antiguedad = antiguedad;
+        this.mascota = mascota;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "numeroCliente=" + numeroCliente + ", nombre=" + nombre + ", antiguedad=" + antiguedad + ", mascota=" + mascota + '}';
+    }
+    
+    
+    
+}
