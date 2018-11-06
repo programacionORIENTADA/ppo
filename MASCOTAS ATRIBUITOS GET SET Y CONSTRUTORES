@@ -1,48 +1,34 @@
 package veterinaria;
+public class Mascotas {
+   private String nombre;
+   private int edad;
 
-import java.util.Scanner;
-
-public class Veterinaria {
-public static void main(String[] args) {
-
-    Scanner sc= new Scanner(System.in);
-    
-    System.out.println("Bienvenido a la veterinaria BD POO");
-    System.out.println("Ingrese Cantidad de Clientes");
-    int cantClientes=sc.nextInt();
-    
-    Veterinaria1 v=new Veterinaria1(cantClientes);
-    
-    for (int i = 0; i < cantClientes; i++){
-    
-   System.out.println("Cliente nuevo"); 
-      System.out.println("************");
-         System.out.println("Ingrese numero Cliente:");
-         int numCliente=sc.nextInt();
-            System.out.println("Ingrese Nombre Cliente");
-            String nomCliente=sc.next();
-               System.out.println("Ingrese Antiguedad del Cliente");
-               int ant=sc.nextInt();
-               
-                  System.out.println("Ingrese Nombre Mascota:");
-                  
-                  String nomMasc=sc.next();
-                     System.out.println("Ingrese Edad Mascota:");
-                     int edadMasc=sc.nextInt();
-                     
-                     Mascotas mascota=new Mascotas(nomMasc,edadMasc);
-                     Cliente cliente=new Cliente(numCliente, nomCliente,ant,mascota);
-                     
-                     v.AgregarClientes(cliente);
-    
-    
-    
-}
-    System.out.println("La cantidad de Clientes es" +v.CantidadClientes());
-    
-       System.out.println("Promedio Edades Mascotas"+v.Promedioedadmascotas());
-       
-          System.out.println("Clientes de hace mas de 5 Años o igual"+v.CantidadClientesAntiguedad());
+    public String getNombre() {
+        return nombre;
     }
-    
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public Mascotas(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        return "Mascotas{" + "nombre=" + nombre + ", edad=" + edad + '}';
+    }
+   
+   
+   
 }
