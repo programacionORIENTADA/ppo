@@ -1,0 +1,15 @@
+
+insert Cliente (numeroCliente, nombre, antiguedad, mascota)
+Value   ('1', 'juan','3años','Motas'),
+        ('2', 'pedro','1 Año','Luis'),
+        ('3', 'luis','6 Meses','Tobi'),
+        ('4', 'julian','3 Meses','Lucas');
+ 
+
+insert Mascota(Edad, Nombre)
+Value('12'lucas'),
+	('10','tobi');
+
+Busqueda DE Datos
+Select * FROM Cliente;
+Select * FROM Mascota;
