@@ -1,0 +1,40 @@
+
+package veterinaria;
+import java.sql.*;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+public class Conector {
+    
+    private PreparedStatement psInsertar;
+    private Statement stmmt;
+    private Connection con;
+    
+   
+    public void insertar (Cliente C, Mascotas M) throws SQLException{
+    
+    String url ="jdbc:mysql://localhost:3306/veterinaria?user=root";
+    
+    con = DriverManager.getConnection(url);
+    stmmt = con.createStatement();
+    
+    
+    psInsertar = con.prepareStatement("INSERT INTO veterianria(Id,Nombre,Antiguedad,NombreM,Edad)"+"values(?,?,?)");
+    
+    
+    psInsertar.setInt(1, C.getNumeroCliente());
+    psInsertar.setString(2, C.getNombre());
+    psInsertar.setInt(3, C.getAntiguedad());
+     psInsertar.setString(4, M.getNombre());
+      psInsertar.setInt(5, M.getEdad());
+    
+    psInsertar.executeUpdate();
+    
+    }
+
+    void insert(Cliente c1,Mascotas m1) {
+   
+    }
+    
+}
