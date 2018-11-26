@@ -1,0 +1,19 @@
+
+package veterinaria;
+
+import java.sql.SQLException;
+
+public class MenuDatos {
+    
+    public static void main(String args [] ) throws SQLException {
+        
+       Cliente c1 = new Cliente ("1","juan","1");
+        Mascotas m1 = new Mascotas("Lucas","");
+
+        Conector cn = new Conector();
+        cn.insert(c1, m1); 
+       
+    }
+    }
+    
+
